@@ -1,6 +1,6 @@
 {
   "name": "nestjs-study",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "nestjs study",
   "author": "yuluo",
   "private": false,
@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prepare": "husky install",
     "release": "standard-version",
-    "affix": "git push --follow-tags nestjs-study main"
+    "affix": "npm run release && git push --follow-tags nestjs-study main"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
