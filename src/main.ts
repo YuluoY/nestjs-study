@@ -3,9 +3,16 @@ import { AppModule } from './app.module';
 import { Response } from './common/response';
 import { HttpFilter } from './common/filter';
 import { ValidationPipe } from '@nestjs/common';
+import { NestExpressApplication } from '@nestjs/platform-express';
+import { join } from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  // 添加NestExpressApplication泛型，扩展属性的类型推导。
+  // 不然eslint会报错useStaticAssets不存在。
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
+  // 使用静态目录。src/public下的所有文件都可以直接访问
+  app.useStaticAssets(join(__dirname, '..', 'public'));
 
   // 全局注册异常拦截器
   app.useGlobalFilters(new HttpFilter());
