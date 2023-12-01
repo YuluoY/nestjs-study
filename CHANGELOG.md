@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/YuluoY/nestjs-study/compare/v1.3.0...v1.4.0) (2023-12-01)
+
+
+### Features
+
+* 使用class-transformer库和class-validator自定义实现更细颗粒的校验，也可使用全局的校验管道 ([1dd6f32](https://github.com/YuluoY/nestjs-study/commit/1dd6f328b70d4ea8f904a30259e11fcff0acd6c3))
+
 ## [1.3.0](https://github.com/YuluoY/nestjs-study/compare/v1.2.0...v1.3.0) (2023-12-01)
 
 
