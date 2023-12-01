@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/YuluoY/nestjs-study/compare/v1.4.0...v1.5.0) (2023-12-01)
+
+
+### Features
+
+* 静态目录的配置 ([3597ac9](https://github.com/YuluoY/nestjs-study/commit/3597ac9c03bee73ae1c42ee3a339604817080532))
+
 ## [1.4.0](https://github.com/YuluoY/nestjs-study/compare/v1.3.0...v1.4.0) (2023-12-01)
 
 
