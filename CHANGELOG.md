@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/YuluoY/nestjs-study/compare/v1.5.1...v1.6.0) (2023-12-01)
+
+
+### Features
+
+* 跨域的两种实现方式 ([6262e0b](https://github.com/YuluoY/nestjs-study/commit/6262e0b64a710feb93be0206acf56d419c447827))
+
 ### [1.5.1](https://github.com/YuluoY/nestjs-study/compare/v1.5.0...v1.5.1) (2023-12-01)
 
 
