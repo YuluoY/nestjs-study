@@ -10,7 +10,9 @@ export class HttpFilter implements ExceptionFilter {
     const request = getRequest<Request>();
 
     const status = exception.getStatus();
-    const message = exception.message;
+
+    // 优先取全局的异常管道符校验失败的响应信息，前提是使用了全局的校验管道
+    const message = exception.getResponse() || exception.message;
 
     response.status(status).json({
       status,
