@@ -7,6 +7,7 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 // import * as cors from 'cors';
 import { RoleGuard } from './role/role.guard';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   // 添加NestExpressApplication泛型，扩展属性的类型推导。
@@ -33,6 +34,25 @@ async function bootstrap() {
 
   // 全局注册权限校验守卫，在controller的路由上使用装饰器@SetMetaData，然后在RoleGuard里面取值做判断
   app.useGlobalGuards(new RoleGuard(new Reflector()));
+
+  // swagger使用
+  const options = new DocumentBuilder()
+    // 添加文档查看jwt校验
+    .addBearerAuth()
+    // 设置文档标题
+    .setTitle('小胡的Nestjs-Stduy')
+    // 设置接口文档的描述
+    .setDescription('我是接口文档的描述')
+    // 设置接口版本
+    .setVersion('1')
+    // 打包
+    .build();
+
+  // 创建文档
+  const document = SwaggerModule.createDocument(app, options);
+
+  // 安装，访问路径：http://localhost:3000/api-docs
+  SwaggerModule.setup('api-docs', app, document);
 
   await app.listen(3000);
 }
