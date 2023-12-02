@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/YuluoY/nestjs-study/compare/v1.8.0...v1.9.0) (2023-12-02)
+
+
+### Features
+
+* 自定义装饰器 ([e7ab4c4](https://github.com/YuluoY/nestjs-study/commit/e7ab4c4475650abc009837994700c1c571273642))
+* 自定义装饰器 ([b34afea](https://github.com/YuluoY/nestjs-study/commit/b34afea7f662aea3c61a34ce97ea1037a2198b70))
+
 ## [1.8.0](https://github.com/YuluoY/nestjs-study/compare/v1.7.0...v1.8.0) (2023-12-02)
 
 
