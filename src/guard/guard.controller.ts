@@ -10,7 +10,7 @@ import { ApiBearerAuth, ApiOperation, ApiParam, ApiQuery, ApiResponse, ApiTags }
 @ApiBearerAuth() // 权限，token校验 文档内的接口请求
 @ApiTags('guard守卫的tag') // 这是/guard下路由的标题
 export class GuardController {
-  constructor(private readonly guardService: GuardService) { }
+  constructor(private readonly guardService: GuardService) {}
 
   @Post()
   create(@Body() createGuardDto: CreateGuardDto) {
