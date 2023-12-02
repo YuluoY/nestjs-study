@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/YuluoY/nestjs-study/compare/v1.7.0...v1.8.0) (2023-12-02)
+
+
+### Features
+
+* 使用swagger快速生成api文档，用装饰器的方式。 ([6d5d9ab](https://github.com/YuluoY/nestjs-study/commit/6d5d9abea7bd5261f725ac02d1eccbf33d898c68))
+
 ## [1.7.0](https://github.com/YuluoY/nestjs-study/compare/v1.6.0...v1.7.0) (2023-12-02)
 
 
