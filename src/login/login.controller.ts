@@ -3,6 +3,7 @@ import { LoginService } from './login.service';
 import { CreateLoginDto } from './dto/create-login.dto';
 import { UpdateLoginDto } from './dto/update-login.dto';
 import { RoleGuard } from 'src/role/role.guard';
+import { ReqUrl, Role } from 'src/common/decorators';
 // import { LoginPipe } from './login.pipe';
 
 @Controller('login')
@@ -19,8 +20,11 @@ export class LoginController {
     return this.loginService.create(createLoginDto);
   }
 
-  @Get()
-  findAll() {
+  @Get('all')
+  @UseGuards(RoleGuard)
+  @Role('superAdmin', 'admin')
+  findAll(@ReqUrl('JK') url: string) {
+    console.log(url);
     return this.loginService.findAll();
   }
 

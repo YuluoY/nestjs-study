@@ -33,7 +33,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   // 全局注册权限校验守卫，在controller的路由上使用装饰器@SetMetaData，然后在RoleGuard里面取值做判断
-  app.useGlobalGuards(new RoleGuard(new Reflector()));
+  // app.useGlobalGuards(new RoleGuard(new Reflector()));
 
   // swagger使用
   const options = new DocumentBuilder()
