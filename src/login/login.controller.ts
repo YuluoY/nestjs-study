@@ -5,7 +5,6 @@ import { UpdateLoginDto } from './dto/update-login.dto';
 import { RoleGuard } from 'src/role/role.guard';
 import { ReqUrl, Role } from 'src/common/decorators';
 // import { LoginPipe } from './login.pipe';
-
 @Controller('login')
 export class LoginController {
   constructor(private readonly loginService: LoginService) {}
@@ -16,8 +15,8 @@ export class LoginController {
   //   return this.loginService.create(createLoginDto);
   // }
   @Post('create')
-  create(@Body() createLoginDto: CreateLoginDto) {
-    return this.loginService.create(createLoginDto);
+  async create(@Body() createLoginDto: CreateLoginDto) {
+    await this.loginService.create(createLoginDto);
   }
 
   @Get('all')
